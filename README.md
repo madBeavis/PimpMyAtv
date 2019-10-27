@@ -46,9 +46,9 @@
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/634687785961390110</li>
 </ul>
 
-<p>If you don’t mind your devices being out of the cases, you can do a setup like the following few pictures.  If you need the Legos, try ebricks.com</p>
+<p>If you don’t mind your devices being out of the cases, you can do a setup like the following few pictures.  If you need the Legos, try ebricks.com website.</p>
 
-<ul>
+<ul>Picture
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/609514577851318492</li>
 </ul>
 
