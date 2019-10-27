@@ -39,24 +39,29 @@
 <p>The next easiest method would be to blow air across your ATVs.  Probably cheap as you may have the fan already.</p>
 
 <p>Heatsinks can be utilized.  Start the hunt on eBay.  They could prove useful when air is forced across them.  Below is an example picture of some on a x96mini:</p>
-<ul>
+<ul>Product links
   <li>https://www.amazon.com/gp/product/B01JB8MQ76/</li>
+</ul>
+<ul>Pictures
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/634687785961390110</li>
 </ul>
 
 <p>If you don’t mind your devices being out of the cases, you can do a setup like the following few pictures.  If you need the Legos, try ebricks.com</p>
 
-
+<ul>
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/609514577851318492</li>
+</ul>
 
 <p>If you want to keep the board in the case you may also utilize fans.  Buy a USB powered 40mm fan, disassemble the device, cut a hole with a Dremel or equivalent in the case, put it back together and attach it to the case by super glue and/or zip ties.  You can setup the fan to push air into the case or pull from it, I used push configuration.  I offset the fan relative to the center of the case, as there is a corner cutout on the board, as to force through as much of the case as possible.  Based off their description on Amazon, they use less than 100 milliamps current.  Example parts and pictures are below:</p>
-<ul>
+<ul>Product Links
   <li>https://www.amazon.com/gp/product/B07JK6WGYX/</li>
   <li>https://www.amazon.com/gp/product/B07SQ1FQDY/</li>
   <li>https://www.amazon.com/dp/B071JB9WYB/</li>
 </ul>
-
-
-
-
+<ul>Pictures
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/622717884056993803</li>
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/622717884056993803</li>
+</ul>
 
 <h2>Storage</h2>
 <p>Some folks have done 3D printed models for stacking devices.  Browse to the following links to see a few examples:</p>
