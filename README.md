@@ -17,18 +17,18 @@
 
 <p>You can power your ATV through the USB port.  This will require a USB A-A cable.  For powering, you don’t need to worry about USB 2 or 3, just a power one, so a basic one will suffice.  You will also need a USB A-A cable for flashing devices, look for higher quality data transfer ones, which should be stated in the description.  An example is below:</p>
 <ul>
-  <li>https://www.amazon.com/Besgoods-2-Pack-Braided-Transfer-Player/dp/B07FCWS5QC/ref=sr_1_5?keywords=USB%2Ba-a%2Bcable&qid=1572118061&s=electronics&sr=1-5&th=1</li>
+  <li>https://www.amazon.com/Besgoods-2-Pack-Braided-Transfer-Player/dp/B07FCWS5QC</li>
 </ul>
 
 <p>The cheapest way to alternatively power your ATVs is to use a USB to 5.5mm x 2.1mm.  These cables cost on the order of $1.25 each.  You can also buy the pigtails for the barrel connector and wire up to your own power supply.  I also like this method as I use ethernet and both are right next to each other, makes things more organized.  An example is below:</p>
 <ul>
-  <li>https://www.amazon.com/gp/product/B073SNC45F/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1</li>
+  <li>https://www.amazon.com/gp/product/B073SNC45F/</li>
 </ul>
 
 <p>An esoteric method to power devices would be to use power over ethernet (POE), but this method is cost prohibitive.  You will need a POE switch and a POE active splitter for each device.  Compared to standard switches, POE ones are expensive.  This method would also only require one cable.  Example items are listed below:</p>
 <ul>
-  <li>https://www.amazon.com/TP-Link-Compliant-Shielded-Optimization-TL-SG1005P/dp/B076HZFY3F/ref=sr_1_3?keywords=POE+switch&qid=1572117766&sr=8-3</li>
-  <li>https://www.amazon.com/ethernet-Splitter-Compliant-Surveillance-ipolex/dp/B078LYW6D7/ref=sr_1_3?keywords=POE+splitter&qid=1572117894&s=electronics&sr=1-3</li>
+  <li>https://www.amazon.com/TP-Link-Compliant-Shielded-Optimization-TL-SG1005P/dp/B076HZFY3F/</li>
+  <li>https://www.amazon.com/ethernet-Splitter-Compliant-Surveillance-ipolex/dp/B078LYW6D7/</li>
 <ul>
 
 <h2>Cooling your ATV</h2>
@@ -40,7 +40,7 @@
 
 <p>Heatsinks can be utilized.  Start the hunt on eBay.  They could prove useful when air is forced across them.  Below is an example picture of some on a x96mini:</p>
 <ul>
-  <li>https://www.amazon.com/gp/product/B01JB8MQ76/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1</li>
+  <li>https://www.amazon.com/gp/product/B01JB8MQ76/</li>
 </ul>
 
 <p>If you don’t mind your devices being out of the cases, you can do a setup like the following few pictures.  If you need the Legos, try ebricks.com</p>
@@ -49,9 +49,9 @@
 
 <p>If you want to keep the board in the case you may also utilize fans.  Buy a USB powered 40mm fan, disassemble the device, cut a hole with a Dremel or equivalent in the case, put it back together and attach it to the case by super glue and/or zip ties.  You can setup the fan to push air into the case or pull from it, I used push configuration.  I offset the fan relative to the center of the case, as there is a corner cutout on the board, as to force through as much of the case as possible.  Based off their description on Amazon, they use less than 100 milliamps current.  Example parts and pictures are below:</p>
 <ul>
-  <li>https://www.amazon.com/gp/product/B07JK6WGYX/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1</li>
-  <li>https://www.amazon.com/gp/product/B07SQ1FQDY/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1</li>
-  <li>https://www.amazon.com/dp/B071JB9WYB/ref=psdc_3015416011_t1_B07SQ1FQDY</li>
+  <li>https://www.amazon.com/gp/product/B07JK6WGYX/</li>
+  <li>https://www.amazon.com/gp/product/B07SQ1FQDY/</li>
+  <li>https://www.amazon.com/dp/B071JB9WYB/</li>
 </ul>
 
 
