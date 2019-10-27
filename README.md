@@ -29,7 +29,7 @@
 <ul>
   <li>https://www.amazon.com/TP-Link-Compliant-Shielded-Optimization-TL-SG1005P/dp/B076HZFY3F/</li>
   <li>https://www.amazon.com/ethernet-Splitter-Compliant-Surveillance-ipolex/dp/B078LYW6D7/</li>
-<ul>
+</ul>
 
 <h2>Cooling your ATV</h2>
 <p>Heat is detrimental to your devices.  Some unlucky folks have had them catch on fire.  Higher temperatures will cause throttling and instability, which will not help your mapping process.  Although the cases have holes in them, they are not suitable for proper cooling.  Approaches from passive to active have been utilized.</p>
