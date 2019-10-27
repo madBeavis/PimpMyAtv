@@ -10,7 +10,7 @@
 <h2>Powering devices</h2>
 <p>An ATV comes with a power brick you put in the outlet and then hookup up to your device.  This may work for a few devices, but quickly becomes unwieldly when you increase your device count, big power strips are unbecoming.  The power port on the back of your ATV is likely 5.5mm x 2.1mm barrel connector, although they may also be listed as 5.5mm x 2.5mm.</p>
 <p>For methods not utilizing the stock brick, you will need a USB charger.  There are a variety of them in amp rating, port count and features.  Some have just one main switch, some have one for each port.  Some have lights, some don’t.  Shop around and see what is available.  You will need at least 1 amp per port rating, which equals 5 watts per port.  Some examples are below:</p>
-<ul>
+<ul>Product links
   <li>https://www.amazon.com/gp/product/B0773J4N43/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1</li>
   <li>https://www.amazon.com/gp/product/B07MM3CXGC/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1</li>
 </ul>
@@ -21,12 +21,12 @@
 </ul>
 
 <p>The cheapest way to alternatively power your ATVs is to use a USB to 5.5mm x 2.1mm.  These cables cost on the order of $1.25 each.  You can also buy the pigtails for the barrel connector and wire up to your own power supply.  I also like this method as I use ethernet and both are right next to each other, makes things more organized.  An example is below:</p>
-<ul>
+<ul>Product links
   <li>https://www.amazon.com/gp/product/B073SNC45F/</li>
 </ul>
 
 <p>An esoteric method to power devices would be to use power over ethernet (POE), but this method is cost prohibitive.  You will need a POE switch and a POE active splitter for each device.  Compared to standard switches, POE ones are expensive.  This method would also only require one cable.  Example items are listed below:</p>
-<ul>
+<ul>Product links
   <li>https://www.amazon.com/TP-Link-Compliant-Shielded-Optimization-TL-SG1005P/dp/B076HZFY3F/</li>
   <li>https://www.amazon.com/ethernet-Splitter-Compliant-Surveillance-ipolex/dp/B078LYW6D7/</li>
 </ul>
@@ -39,10 +39,10 @@
 <p>The next easiest method would be to blow air across your ATVs.  Probably cheap as you may have the fan already.</p>
 
 <p>Heatsinks can be utilized.  Start the hunt on eBay.  They could prove useful when air is forced across them.  Below is an example picture of some on a x96mini:</p>
-<ul>Product links
+<ul>Product link
   <li>https://www.amazon.com/gp/product/B01JB8MQ76/</li>
 </ul>
-<ul>Pictures
+<ul>Picture
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/634687785961390110</li>
 </ul>
 
@@ -65,7 +65,7 @@
 
 <h2>Storage</h2>
 <p>Some folks have done 3D printed models for stacking devices.  Browse to the following links to see a few examples:</p>
-<ul>
+<ul>Picture
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/625701792453361674</li>
 </ul>
 
