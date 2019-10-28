@@ -31,6 +31,17 @@
   <li>https://www.amazon.com/ethernet-Splitter-Compliant-Surveillance-ipolex/dp/B078LYW6D7/</li>
 </ul>
 
+<p>A more DIY method of powering a set of ATV would be to use a power supply.  You would need to get the power to the devices from the power supply, with terminal blocks being one amongst a myriad of options.  The Amazon links below along with a picture should give you an idea to get started.</p>
+<ul>Product Links
+  <li>https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/</li>
+  <li>https://www.amazon.com/Summer-Home-Position-Covered-Terminal-Connector/dp/B074DDL68Y/</li>
+</ul>
+<ul>Picture
+  <li>https://www.amazon.com/Summer-Home-Position-Covered-Terminal-Connector/dp/B074DDL68Y/</li>
+</ul>
+
+https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/
+
 <h2>Cooling your ATV</h2>
 <p>Heat is detrimental to your devices.  Some unlucky folks have had them catch on fire.  Higher temperatures will cause throttling and instability, which will not help your mapping process.  Although the cases have holes in them, they are not suitable for proper cooling.  Approaches from passive to active have been utilized.</p>
 
