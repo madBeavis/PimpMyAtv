@@ -8,7 +8,7 @@
 <p>The goal of this guide is to provide begineers with ideas for creating a safe and efficient setup that works well.  I have wasted money getting to the setup that I use, i.e. 20+ USB A-A cables that I won’t ever use again.  I would have bought USB-barrel if I was aware of them  If you have an idea, feel free to submit it, so that others can benefit from your experience.  Your mileage may vary.</p>
 <p>Never forget the axiom of "a happy significant other is a happy life".  Many tolerate our various levels of Pokémon engagement.  Don't piss them off with a half cocked setup that is a mess.</p>
 
-<h2>Safety</>
+<h2>Safety</h2>
 <p>An unsafe set is just wrong.  You will invest a substantial amount of time, energy and money into obtaining and running a setup.  Spend some time to buy quality equipment that won't go up in smoke and burn your place down.  Determine electrical requirements for your setup, don't just daisy chain multiple cheap power strips together and hope for the best.</p>
 <p>Your environment can also impact your setup.  Animals can do all sorts of silly things with electronics, i.e. get tangled in them, urinate on them and chew on cords.  Offspring can wreak all sorts of havoc.</p>
 <ul>Pictures
