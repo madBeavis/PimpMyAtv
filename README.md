@@ -3,7 +3,7 @@
     <h1>Accessories and modifications for ATVs</h1>
 
 <h2>Foreword</h2>
-<p>This is designed as a beginner’s guide to accessories for Android TV boxes (ATV).  If you have found this, you are likely using them for mapping in Pokémon GO.</p>
+<p>This is designed as a beginner’s guide to accessories and modifications for Android TV boxes (ATV).  If you have found this, you are likely using them for mapping in Pokémon GO.</p>
 
 <p>The goal of this guide is to provide begineers with ideas for creating a safe and efficient setup that works well.  I have wasted money getting to the setup that I use, i.e. 20+ USB A-A cables that I won’t ever use again.  I would have bought USB-barrel if I was aware of them  If you have an idea, feel free to submit it, so that others can benefit from your experience.  Your mileage may vary.</p>
 <p>Never forget the axiom of "a happy significant other is a happy life".  Many tolerate our various levels of Pokémon engagement.  Don't piss them off with a half cocked setup that is a mess.</p>
@@ -88,9 +88,11 @@ https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/625701792453361674</li>
 </ul>
 
-<h2>Eye candy</h2>
-<p>The following pictures are of some nicely done setups.  Peruse through them to get some ideas.</p>
-<ul>Pictures from dkmur
+<h2>User setups</h2>
+<p>The following pictures are of some setups of users, running the gamut from simple desktop to industrial grade, in no particular order.  Peruse through them to get some ideas.</p>
+<ul>Picture from dongusthehunter
+  <li>https://discordapp.com/channels/465247740553592832/502074808662622208/638522219647205377</li>
+</ul><ul>Pictures from dkmur
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638511814879215634</li>
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638512219650260992</li>
 </ul>
