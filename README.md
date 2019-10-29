@@ -5,10 +5,18 @@
 <h2>Foreword</h2>
 <p>This is designed as a beginner’s guide to accessories for Android TV boxes (ATV).  If you have found this, you are likely using them for mapping in Pokémon GO.</p>
 
-<p>The goal of this guide is to provide begineers with ideas for creating a safe and efficient setup that works the best it can.  I have wasted money getting to the setup that I use, i.e. 20+ USB A-A cables that I won’t ever use again.  I would have bought USB-barrel if I was aware of them  If you have an idea, feel free to submit it, so that others can benefit from your experience.  Your mileage may vary.</p>
+<p>The goal of this guide is to provide begineers with ideas for creating a safe and efficient setup that works well.  I have wasted money getting to the setup that I use, i.e. 20+ USB A-A cables that I won’t ever use again.  I would have bought USB-barrel if I was aware of them  If you have an idea, feel free to submit it, so that others can benefit from your experience.  Your mileage may vary.</p>
+<p>Never forget the axiom of "a happy significant other is a happy life".  Many tolerate our various levels of Pokémon engagement.  Don't piss them off with a half cocked setup that is a mess.</p>
 
+<h2>Safety</>
+<p>An unsafe set is just wrong.  You will invest a substantial amount of time, energy and money into obtaining and running a setup.  Spend some time to buy quality equipment that won't go up in smoke and burn your place down.  Determine electrical requirements for your setup, don't just daisy chain multiple cheap power strips together and hope for the best.</p>
+<p>Your environment can also impact your setup.  Animals can do all sorts of silly things with electronics, i.e. get tangled in them, urinate on them and chew on cords.  Offspring can wreak all sorts of havoc.</p>
+<ul>Pictures
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638359898169802762</li>
+</ul>
+  
 <h2>Powering devices</h2>
-<p>An ATV comes with a power brick you put in the outlet and then hookup up to your device.  This may work for a few devices, but quickly becomes unwieldly when you increase your device count, big power strips are unbecoming.  The power port on the back of your ATV is likely 5.5mm x 2.1mm barrel connector, although they may also be listed as 5.5mm x 2.5mm.</p>
+<p>An ATV comes with a power brick you put in the outlet and then hookup up to your device.  This may work for a few devices, but quickly becomes unwieldly when you increase your device count, big power strips could be unbecoming depending on your situation and goals.  The power port on the back of your ATV is likely 5.5mm x 2.1mm barrel connector, although they may also be listed as 5.5mm x 2.5mm.</p>
 <p>For methods not utilizing the stock brick, you will need a USB charger.  There are a variety of them in amp rating, port count and features.  Some have just one main switch, some have one for each port.  Some have lights, some don’t.  Shop around and see what is available.  You will need at least 1 amp per port rating, which equals 5 watts per port.  Some examples are below:</p>
 <ul>Product links
   <li>https://www.amazon.com/gp/product/B0773J4N43/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1</li>
@@ -78,6 +86,13 @@ https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/
 <p>Some folks have done 3D printed models for stacking devices.  Browse to the following links to see a few examples:</p>
 <ul>Picture
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/625701792453361674</li>
+</ul>
+
+<h2>Eye candy</h2>
+<p>The following pictures are of some nicely done setups.  Peruse through them to get some ideas.</p>
+<ul>Pictures from dkmur
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638511814879215634</li>
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638512219650260992</li>
 </ul>
 
 </body>
