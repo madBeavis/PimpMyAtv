@@ -90,9 +90,13 @@ https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/
 
 <h2>User setups</h2>
 <p>The following pictures are of some setups of users, running the gamut from simple desktop to industrial grade, in no particular order.  Peruse through them to get some ideas.</p>
-<ul>Picture from dongusthehunter
+<ul>Picture from dongusthehunter (straighforward desktop setup)
   <li>https://discordapp.com/channels/465247740553592832/502074808662622208/638522219647205377</li>
-</ul><ul>Pictures from dkmur
+</ul>
+<ul>Picture from isdor (setup using relays and 5v power supply)
+  <li>https://discordapp.com/channels/465247740553592832/590787129458688000/639507735146135552</li>
+</ul>
+  <ul>Pictures from dkmur (well organized cabinet, Jay Pritchett would be proud)
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638511814879215634</li>
   <li>https://discordapp.com/channels/465247740553592832/590787129458688000/638512219650260992</li>
 </ul>
