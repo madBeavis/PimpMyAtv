@@ -43,6 +43,7 @@
 <ul>Product Links
   <li>https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/</li>
   <li>https://www.amazon.com/Summer-Home-Position-Covered-Terminal-Connector/dp/B074DDL68Y/</li>
+  <li>https://www.amazon.com/Eyeboot-Power-Barrel-Connector-Pigtail/dp/B07N2KZYK7/</li>
 </ul>
 <ul>Picture
   <li>https://www.amazon.com/Summer-Home-Position-Covered-Terminal-Connector/dp/B074DDL68Y/</li>
