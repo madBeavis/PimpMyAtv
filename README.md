@@ -76,6 +76,7 @@ https://www.amazon.com/MEAN-WELL-LRS-350-5-Single-Switchable/dp/B0131V9TG0/
 <ul>Product Links
   <li>https://www.amazon.com/gp/product/B07JK6WGYX/</li>
   <li>https://www.amazon.com/gp/product/B07SQ1FQDY/</li>
+  <li>https://www.amazon.com/dp/B01BV1MTF0/</li>
   <li>https://www.amazon.com/dp/B071JB9WYB/</li>
   <li>https://www.amazon.com/Areyourshop-5-5mm-2-5mm-Camera-Connectors/dp/B01CJE0ZLI</li>
 </ul>
