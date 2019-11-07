@@ -19,8 +19,9 @@
 <p>An ATV comes with a power brick you put in the outlet and then hookup up to your device.  This may work for a few devices, but quickly becomes unwieldly when you increase your device count, big power strips could be unbecoming depending on your situation and goals.  The power port on the back of your ATV is likely 5.5mm x 2.1mm barrel connector, although they may also be listed as 5.5mm x 2.5mm.</p>
 <p>For methods not utilizing the stock brick, you will need a USB charger.  There are a variety of them in amp rating, port count and features.  Some have just one main switch, some have one for each port.  Some have lights, some don’t.  Shop around and see what is available.  You will need at least 1 amp per port rating, which equals 5 watts per port.  Some examples are below:</p>
 <ul>Product links
-  <li>https://www.amazon.com/gp/product/B0773J4N43/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1</li>
-  <li>https://www.amazon.com/gp/product/B07MM3CXGC/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1</li>
+  <li>https://www.amazon.com/gp/product/B0773J4N43/</li>
+  <li>https://www.amazon.com/gp/product/B07MM3CXGC/</li>
+  <li>https://www.amazon.com/gp/product/B07C3CCLCM/</li>
 </ul>
 
 <p>You can power your ATV through the USB port.  This will require a USB A-A cable.  For powering, you don’t need to worry about USB 2 or 3, just a power one, so a basic one will suffice.  You will also need a USB A-A cable for flashing devices, look for higher quality data transfer ones, which should be stated in the description.  An example is below:</p>
