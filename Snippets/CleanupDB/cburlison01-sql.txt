@@ -1,0 +1,15 @@
+SELECT * FROM pokestop WHERE last_updated < date_sub(now(), interval 30 day);
+
+DELETE FROM pokestop WHERE last_updated < date_sub(now(), interval 30 day);
+
+MAD - stops that have converted to gyms
+select * from pokestop where pokestop_id in (select gym_id from gym);
+
+
+SELECT * FROM mad.gym WHERE last_scanned < date_sub(now(), interval 30 day);
+
+DELETE FROM mad.gym WHERE last_scanned < date_sub(now(), interval 30 day);
+
+SELECT * FROM mad.gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
+
+DELETE FROM mad.gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
