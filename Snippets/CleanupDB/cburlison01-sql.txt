@@ -8,8 +8,8 @@ MAD - stops that have converted to gyms
 select * from pokestop where pokestop_id in (select gym_id from gym);
 DELETE from pokestop where pokestop_id in (select gym_id from gym);
 
-SELECT * FROM mad.gym WHERE last_scanned < date_sub(now(), interval 30 day);
-DELETE FROM mad.gym WHERE last_scanned < date_sub(now(), interval 30 day);
+SELECT * FROM gym WHERE last_scanned < date_sub(now(), interval 30 day);
+DELETE FROM gym WHERE last_scanned < date_sub(now(), interval 30 day);
 
-SELECT * FROM mad.gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
-DELETE FROM mad.gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
+SELECT * FROM gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
+DELETE FROM gymdetails WHERE last_scanned < date_sub(now(), interval 30 day);
