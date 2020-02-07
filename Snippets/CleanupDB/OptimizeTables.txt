@@ -1,0 +1,1 @@
+mysqlcheck -o dbname -u username -p
