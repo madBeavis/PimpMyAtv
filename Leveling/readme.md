@@ -8,7 +8,7 @@ To make the most of MAD, your accounts need to be at level 30.  The following is
 
 # How to make accounts
 
-Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
+Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 (2 million xp) if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
 
 There appears to be a stop spun limit per week of 7k.  As shown by the math provided by eevvee33 @ https://discordapp.com/channels/465247740553592832/465247740553592835/669635127156146178 breaks down why your worker will get stuck at about level 29.8 and hang.  Simply rest it for a few days and finish it off.  The math is shown as follows:
 
