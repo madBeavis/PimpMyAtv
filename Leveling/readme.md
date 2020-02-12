@@ -12,10 +12,10 @@ Level 30 accounts are created with MAD in what is called level mode.  This just 
 
 There appears to be a stop spun limit per week of 7k.  As shown by the math provided by eevvee33 @ https://discordapp.com/channels/465247740553592832/465247740553592835/669635127156146178 breaks down why your worker will get stuck at about level 29.8 and hang.  Simply rest it for a few days and finish it off.  The math is shown as follows:
 
-spin a new pokestop: 250xp
-spin 10th new pokestop in a row: 500xp
-daily spin streak (days 1-6): 500xp
-daily spin streak (day 7): 2000xp
+* spin a new pokestop: 250xp
+* spin 10th new pokestop in a row: 500xp
+* daily spin streak (days 1-6): 500xp
+* daily spin streak (day 7): 2000xp
 This explains why we hit level 29.8 after spinning 7000 stops:
 6300 new stops (250xp)
  700 new stops as 10th new stop in a row (500xp)
