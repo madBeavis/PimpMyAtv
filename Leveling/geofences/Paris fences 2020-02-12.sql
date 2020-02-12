@@ -5,6 +5,8 @@
 	Paris geofences
 	Approximately 10.5k stops
 	
+	Original fences credited to Montesuma @ https://discordapp.com/channels/465247740553592832/467318193141317659/565532052892418071
+	
 	
 	1. Change the variable to match your instance id - if you don't know how to find this, you probably shouldn't be importing this
 	2. Import in a tool like HeidiSQL
