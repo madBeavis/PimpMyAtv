@@ -21,4 +21,4 @@ There appears to be a stop spun limit per week of 7k.  As shown by the math prov
   * 700 new stops as 10th new stop in a row (500xp)
   * 6 daily streaks (500xp)
   * 1 7th day streak (2000xp)
-*6300*250 + 700*500 + 6*500 + 2000 = 1930000 xp (level 29.8)
+* 6300*250 + 700*500 + 6*500 + 2000 = 1930000 xp (level 29.8)
