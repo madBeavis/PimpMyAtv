@@ -6,6 +6,10 @@ To make the most of MAD, your accounts need to be at level 30.  The following is
 2. Raids - any account over level 5 will work, which is the level you need to be to examine gyms
 3. Quests - should be level 30 or higher.  Some rewards like monsters will be the same for all accounts that spin the stop for the quest.  However, say a level 5 was spun a stop that should be ultra balls, but since they can't get them based on their level the rewards would be erroneous.
 
+# Buying accounts
+
+I had back luck buying accounts off of ebay for the most part.  
+
 # How to make accounts
 
 Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 (2 million xp) if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
