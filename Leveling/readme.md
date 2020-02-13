@@ -8,9 +8,9 @@ To make the most of MAD, your accounts need to be at level 30.  The following is
 
 # Buying accounts
 
-I had back luck buying accounts off of ebay for the most part.  
+I had run up against the Google account registration limit, so in order to have more accounts, I bought some.  I had back luck buying accounts off of ebay for the most part.  I took 4x low level ptc accounts and leveled them to 30.  The person selling them took them back via recovery.  I did buy a couple from a guy in Israel - google accounts so I could setup the recovery myself but they were also in Hebrew.
 
-# How to make accounts
+# Making accounts
 
 Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 (2 million xp) if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
 
