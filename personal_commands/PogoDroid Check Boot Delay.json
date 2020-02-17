@@ -1,0 +1,10 @@
+{
+            "pogodroidBootdelay":
+        [
+                {
+                        "TYPE": "jobType.PASSTHROUGH",
+                        "SYNTAX": "cat /data/data/com.mad.pogodroid/shared_prefs/com.mad.pogodroid_preferences.xml | grep boot_delay | awk -F '    <string name=\"boot_delay\">|</string>' '{print $2}'"
+                }
+        ]
+
+}
