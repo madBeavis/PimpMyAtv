@@ -1,0 +1,8 @@
+{
+  "pogodroid_setBootdelay_100": [
+    {
+      "TYPE": "jobType.PASSTHROUGH",
+      "SYNTAX": "pdconf=\"/data/data/com.mad.pogodroid/shared_prefs/com.mad.pogodroid_preferences.xml\" && sed -i 's,\"boot_delay\">.*<,\"boot_delay\">100<,g' \"$pdconf\" && chmod 660 \"$pdconf\" && puser=$(ls -la /data/data/com.mad.pogodroid/|head -n2|tail -n1|awk '{print $3}') && chown \"$puser\":\"$puser\" \"$pdconf\""
+    }
+  ]
+}
