@@ -1,9 +1,0 @@
-{     
-	"Wifi On":
-        [
-                {
-                        "TYPE": "jobType.PASSTHROUGH",
-                        "SYNTAX": "su -c 'svc wifi enable';"
-                }
-        ]
-}
