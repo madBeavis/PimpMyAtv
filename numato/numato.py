@@ -318,7 +318,7 @@ user = args.username  # Device Telnet user name
 password = args.password # Device Telnet password
 
 # checks for options to run
-if args.devices is None and args.status is not None:
+if args.devices is None and args.status is None:
     # test for status checking of devices
     print("Provide a device list to check the status of devices\n")
 
@@ -422,8 +422,7 @@ if connectToDevice(DeviceIP):
 
         print("Power Status for Device(s)")
         print('Devices: ' + devices)
-        print('Status:  ' + returnValue)
-        print("")
+        print('Status:  ' + returnValue + '\n')
 
         exit(returnValue)
 
@@ -432,8 +431,7 @@ if connectToDevice(DeviceIP):
 
         print("Power Status for Device(s)")
         print("Devices:  " + my_devices)
-        print("Status:   " + returnValue)
-        print("")
+        print("Status:   " + returnValue + '\n')
 
         exit(returnValue)
 else:
