@@ -91,11 +91,23 @@ def connectToRelayBoard():
 
 
 # power off a list of devices
-def powerOffDevices(devices, delay, wait, silent=False):
+def powerOffDevices(devices, delay, wait, silent=False, ignore_off=False):
     i = 1
     count_devices = len(devices)
 
-    for device in devices:
+    if ignore_off:
+        devices_pc_status = getRelayStatus(devices, delay)
+
+    for j, device in enumerate(devices):
+        # check if ignore devices that are off
+        if ignore_off:
+            # check if relay is off and normally open - it is already off
+            if devices_pc_status[j] == '0' and DeviceNormallyOpen(device):
+                continue
+            # check if relay is on and normally close - it is already off
+            elif devices_pc_status[j] == '1' and not DeviceNormallyOpen(device):
+                continue
+
         if not silent:
             print("Powering off device " + device)
 
@@ -121,11 +133,23 @@ def powerOffDevices(devices, delay, wait, silent=False):
     return True, devices
 
 
-def powerOnDevices(devices, delay, wait, silent=False):
+def powerOnDevices(devices, delay, wait, silent=False, ignore_off=False):
     i = 1
     count_devices = len(devices)
 
-    for device in devices:
+    if ignore_off:
+        devices_pc_status = getRelayStatus(devices, delay)
+
+    for j, device in enumerate(devices):
+        # check if ignore devices that are off
+        if ignore_off:
+            # check if relay is off and normally open
+            if devices_pc_status[j] == '0' and DeviceNormallyOpen(device):
+                continue
+            # check if relay is on and normally close
+            elif devices_pc_status[j] == '1' and not DeviceNormallyOpen(device):
+                continue
+
         if not silent:
             print("Powering on device " + device)
 
@@ -465,7 +489,7 @@ parser.add_argument('-user', '--username', dest='username', help='Username to lo
 parser.add_argument('-pwd', '--password', dest='password', help='Password to log into board with, default=admin',
                     type=str, default='admin')
 parser.add_argument('-io', '--ignore_off', dest='ignore_off', help='Ignore devices that are off, default=true',
-                    action='store_false')
+                    action='store_true')
 parser.add_argument('-l', '--log', dest='logging', help='Enable logging output to specified file', type=str, default='numato_log.txt')
 
 args = parser.parse_args()
@@ -528,28 +552,26 @@ if connectToRelayBoard():
 
     elif args.kill_all:  # kill power to all relays
         devices_to_kill = fixUpDeviceNames('Z')
-        powerOffDevices(devices=devices_to_kill, delay=args.delay, wait=args.wait, silent=args.silent)
+        powerOffDevices(devices=devices_to_kill, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
 
     elif args.all_on:  # power on all devices
         devices_on = fixUpDeviceNames('Z')
 
         if args.off_first:
-            powerOffDevices(devices=devices_on, delay=args.delay, wait=args.wait, silent=args.silent)
+            powerOffDevices(devices=devices_on, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
 
-        powerOnDevices(devices=devices_on, delay=args.delay, wait=args.wait, silent=args.silent)
+        powerOnDevices(devices=devices_on, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
 
     elif args.power_cycle_all:  # power cycle all devices that are currently on
         devices_to_power_cycle = getRelayStatus(fixUpDeviceNames('Z')[0])
 
         for device_to_power_cycle in devices_to_power_cycle:
             if device_to_power_cycle == '1':
-                powerCycleDevices(devices=device_to_power_cycle, delay=args.delay, wait=args.wait, silent=args.silent,
-                                  ignore_off=args.ignore_off)
+                powerCycleDevices(devices=device_to_power_cycle, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
 
     elif my_devices != "" and args.power_cycle:  # power cycle specified devices
         # power cycle devices
-        powerCycleDevices(devices=my_devices, delay=args.delay, wait=args.wait, silent=args.silent,
-                          ignore_off=args.ignore_off)
+        powerCycleDevices(devices=my_devices, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
 
     elif args.power_cycle and args.devices is None:
         devices_status = fixUpDeviceNames('Z')
@@ -573,9 +595,10 @@ if connectToRelayBoard():
             power_character = my_power_options[index]
 
             if power_character == '0':
-                powerOffDevices(devices=device, delay=args.delay, wait=args.wait, silent=args.silent)
+                powerOffDevices(devices=device, delay=args.delay, wait=args.wait, silent=args.silent, ignore_off=args.ignore_off)
             elif power_character == '1':
-                powerOnDevices(devices=device, delay=args.delay, wait=args.wait, silent=args.silent)
+                powerOnDevices(devices=device, delay=args.delay, wait=args.wait, silent=args.silent,
+                                  ignore_off=args.ignore_off)
             elif power_character == '3':
                 powerCycleDevices(devices=device, delay=args.delay, wait=args.wait, silent=args.silent)
 
