@@ -1,0 +1,9 @@
+{     
+	"HDMI-CEC Off":
+        [
+                {
+                        "TYPE": "jobType.PASSTHROUGH",
+                        "SYNTAX": "su -c 'settings put global hdmi_control_enabled 0';"
+                }
+        ]
+}
