@@ -1,0 +1,9 @@
+{     
+    "Pogodroid Off":
+        [
+                {
+                        "TYPE": "jobType.PASSTHROUGH",
+                        "SYNTAX": "su -c 'am force-stop com.mad.pogodroid';"
+                }
+        ]
+}
