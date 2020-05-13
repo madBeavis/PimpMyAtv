@@ -1,0 +1,8 @@
+{
+  "pogodroid_post_destination": [
+    {
+      "TYPE": "jobType.PASSTHROUGH",
+      "SYNTAX": "pdconf=\"/data/data/com.mad.pogodroid/shared_prefs/com.mad.pogodroid_preferences.xml\" && sed -i 's,\"post_destination\">.*<,\"post_destination\">http://192.168.0.1:8000<,g' \"$pdconf\" && chmod 660 \"$pdconf\" && puser=$(ls -la /data/data/com.mad.pogodroid/|head -n2|tail -n1|awk '{print $3}') && chown \"$puser\":\"$puser\" \"$pdconf\""
+    }
+  ]
+}
