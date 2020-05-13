@@ -9,4 +9,8 @@ SELECT concat(latitude,",",longitude) AS Coord FROM trs_spawn WHERE calc_endmins
 59.762262 17.772755
 ))'), POINT(latitude, longitude)) ORDER by Coord ASC
 
-Do note that you need to close the fence for the query to work.  First must match the last.  Also note the coords have to be in the exact format above for lat/long.
+1. Do note that you need to close the fence for the query to work, i.e. first must match the last
+1. Also note the coords have to be in the format above for lat/long
+   1. Different than what data is stored for a geofence
+   1. A space between lat/long and not a comma
+   1. Comma is reserved for seperator between lat/long pairs
