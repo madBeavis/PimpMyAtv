@@ -1,0 +1,12 @@
+https://discordapp.com/channels/465247740553592832/467318193141317659/689164574095966290
+
+SELECT concat(latitude,",",longitude) AS Coord FROM trs_spawn WHERE calc_endminsec is null and ST_CONTAINS( ST_GEOMFROMTEXT('POLYGON((
+59.762262 17.772755,
+59.713498 17.746829,
+59.697845 17.808479,
+59.749717 17.855227,
+59.765449 17.81297,
+59.762262 17.772755
+))'), POINT(latitude, longitude)) ORDER by Coord ASC
+
+Do note that you need to close the fence for the query to work.  First must match the last.  Also note the coords have to be in the exact format above for lat/long.
