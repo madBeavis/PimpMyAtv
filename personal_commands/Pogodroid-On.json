@@ -1,0 +1,9 @@
+{     
+    "Pogodroid On":
+        [
+                {
+                        "TYPE": "jobType.PASSTHROUGH",
+                        "SYNTAX": "su -c 'monkey -p com.mad.pogodroid 1';"
+                }
+        ]
+}
