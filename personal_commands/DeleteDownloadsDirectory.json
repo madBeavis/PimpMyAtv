@@ -1,0 +1,9 @@
+{     
+	"Delete Download Dir Contents":
+        [
+                {
+                        "TYPE": "jobType.PASSTHROUGH",
+                        "SYNTAX": "su -c 'rm /sdcard/Download/*';"
+                }
+        ]
+}
