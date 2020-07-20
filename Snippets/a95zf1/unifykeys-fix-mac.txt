@@ -1,5 +1,0 @@
-echo 1 > /sys/class/unifykeys/lock
-echo mac > /sys/class/unifykeys/name
-echo "yourMac" >/sys/class/unifykeys/write
-cat /sys/class/unifykeys/read
-echo 0 > /sys/class/unifykeys/lock
