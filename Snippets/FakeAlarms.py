@@ -32,6 +32,7 @@ body["individual_defense"] = 14
 body["individual_attack"] = 14
 body["individual_stamina"] = 14
 body["disappear_time"] = datetime.now().timestamp() + timedelta(minutes=28, seconds=12).total_seconds()
+body["disappear_time_utc"] = datetime.utcnow().timestamp() + timedelta(minutes=28, seconds=12).total_seconds()
 body["pokemon_level"] = 15
 body["costume"] = 0
 body["weather"] = 0
@@ -56,7 +57,7 @@ sql = 'INSERT INTO pokemon (encounter_id, spawnpoint_id, pokemon_id, latitude, l
       '(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
 
 val = (body['encounter_id'], body['spawnpoint_id'], body['pokemon_id'], body['latitude'], body['longitude'],
-       datetime.fromtimestamp(body["disappear_time"]), body["individual_attack"], body["individual_defense"], body["individual_stamina"],
+       datetime.fromtimestamp(body["disappear_time_utc"]), body["individual_attack"], body["individual_defense"], body["individual_stamina"],
        body['move_1'], body['move_2'], body['cp'], body['cp_multiplier'], body['weight'], body['height'],
        body['gender'], body['form'], 0, datetime.now() )
 
