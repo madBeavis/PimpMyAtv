@@ -1,6 +1,8 @@
 # fake monster creator for mad and pokealarm
+# sends an alert to pa and makes an entry into the db for the map
+#
 # remember i hate python, so this is very hacky
-# adjust values that you see fit
+# adjust values that you see fit, if you have to ask you shouldn't bother
 
 import json
 import requests
@@ -14,7 +16,7 @@ pa_url = 'http://pa_ip:port'
 
 body = {}
 body['gender'] = 1
-body['encounter_id'] = random.randrange(83781815950007, 18446711026929527115)
+body['encounter_id'] = 1844671102692952711678
 body['spawnpoint_id'] = 'some_id'
 body['cp'] = 281
 body['cp_multiplier'] = 0.69
