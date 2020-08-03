@@ -1,5 +1,6 @@
 # fake monster creator for mad and pokealarm
 # remember i hate python, so this is very hacky
+# adjust values that you see fit
 
 import json
 import requests
