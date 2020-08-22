@@ -22,6 +22,8 @@ I can't see routefree leveling being faster than using actual routes, so I only 
 
 # Why can't I get 30 in one run
 
+You need to start using eggs as they come...
+
 There appears to be a stop spun limit per week of 7k.  As shown by the math provided by eevvee33 @ https://discordapp.com/channels/465247740553592832/465247740553592835/669635127156146178 breaks down why your worker will get stuck at about level 29.8 and hang.  Simply rest it for a few days and finish it off.  The math is shown as follows:
 
 * spin a new pokestop: 250xp
