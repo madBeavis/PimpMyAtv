@@ -6,6 +6,10 @@ To make the most of MAD, your accounts need to be at level 30.  The following is
 2. Raids - any account over level 5 will work, which is the level you need to be to examine gyms
 3. Quests - should be level 30 or higher.  Some rewards like monsters will be the same for all accounts that spin the stop for the quest.  However, say a level 5 was spun a stop that should be ultra balls, but since they can't get them based on their level the rewards would be erroneous.
 
+# Usage of fences and stops
+
+Consider running on a seperate instance of MAD and DB.  Make a backup first of db.  Import the stops without editing in say HeidiSQL.  For the fences, you will need to edit the file and set the variable for instance ID to match yours.
+
 # Buying accounts
 
 I had run up against the Google account registration limit, so in order to have more accounts, I bought some.  I had back luck buying accounts off of ebay for the most part.  I took 4x low level ptc accounts and leveled them to 30.  The person selling them took them back via recovery.  I did buy a couple from a guy in Israel - google accounts so I could setup the recovery myself but they were also in Hebrew.
@@ -13,6 +17,10 @@ I had run up against the Google account registration limit, so in order to have 
 # Making accounts
 
 Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 (2 million xp) if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
+
+I can't see routefree leveling being faster than using actual routes, so I only use routes.  Staying focused on the densest areas and not back tracking is they key.  Make sure you have ortools installed to speed up route calcs.  Make sure to pop eggs as they come, using my NYC routes the densest are at the beginning, might as well get the most XP per egg.
+
+# Why can't I get 30 in one run
 
 There appears to be a stop spun limit per week of 7k.  As shown by the math provided by eevvee33 @ https://discordapp.com/channels/465247740553592832/465247740553592835/669635127156146178 breaks down why your worker will get stuck at about level 29.8 and hang.  Simply rest it for a few days and finish it off.  The math is shown as follows:
 
