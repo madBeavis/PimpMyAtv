@@ -2,13 +2,13 @@
 
 To make the most of MAD, your accounts need to be at level 30.  The following is a quick rundown of what an account needs to be levelwise for modes:
 
-1. Monster scanning - you can have any level account find monsters, but to get the IV of it the account needs to be level 30 or higher.  Lower than 30 and MAD will ignore the IV data from the encounter.
+1. Monster scanning - you can have any level account find monsters, spawnpoints and TTH but to get the IV of it the account needs to be level 30 or higher.  Lower than 30 and MAD will ignore the IV data from the encounter as they are random.
 2. Raids - any account over level 5 will work, which is the level you need to be to examine gyms
-3. Quests - should be level 30 or higher.  Some rewards like monsters will be the same for all accounts that spin the stop for the quest.  However, say a level 5 was spun a stop that should be ultra balls, but since they can't get them based on their level the rewards would be erroneous.
+3. Quests - should be level 30 or higher.  Some rewards like monsters will be the same for all accounts that spin the stop for the quest.  However, say a level 5 was spun a stop that should be ultra balls, but since they can't get them based on their level the rewards for that quest would be erroneous for a level 30+ that also spins it (no testing for less than level 30 accounts regarding this has been done).
 
-# Usage of fences and stops
+# Usage of instances, fences and stop dump
 
-Consider running on a seperate instance of MAD and DB.  Make a backup first of db.  Import the stops without editing in say HeidiSQL.  For the fences, you will need to edit the file and set the variable for instance ID to match yours.
+Consider running on a seperate instance of MAD and DB.  Make a backup first of db.  Import the stops without editing in say HeidiSQL.  For the fences, you will need to edit the file and set the variable for instance ID to match yours.  Make your areas from the fences.  Make your walkers from the area.
 
 # Buying accounts
 
