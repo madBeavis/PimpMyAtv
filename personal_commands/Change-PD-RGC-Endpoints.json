@@ -1,0 +1,8 @@
+{
+  "SERVER_MIGRATION JOB (Change Endpoints)": [
+    {
+      "TYPE": "jobType.PASSTHROUGH",
+      "SYNTAX": "pdconf=\"/data/data/com.mad.pogodroid/shared_prefs/com.mad.pogodroid_preferences.xml\" && sed -i 's,\"post_destination\">.*<,\"post_destination\">http:\/\/YOUR_POGODROID_URL_DESTINATION:PORT<,g' \"$pdconf\" && sed -i 's,\"auth_username\">.*<,\"auth_username\">YOUR_AUTH_USERNAME<,g' \"$pdconf\" && sed -i 's,\"auth_password\">.*<,\"auth_password\">YOUR_AUTH_PASSWORD<,g' \"$pdconf\" && chmod 660 \"$pdconf\" && puser=$(ls -la /data/data/com.mad.pogodroid/|head -n2|tail -n1|awk '{print $3}') && chown \"$puser\":\"$puser\" \"$pdconf\" && rgcconf=\"/data/data/de.grennith.rgc.remotegpscontroller/shared_prefs/de.grennith.rgc.remotegpscontroller_preferences.xml\" && sed -i 's,\"websocket_uri\">.*<,\"websocket_uri\">ws:\/\/YOUR_RGC_URL_DESTINATION:PORT<,g' \"$rgcconf\" && sed -i 's,\"auth_username\">.*<,\"auth_username\">YOUR_AUTH_USERNAME<,g' \"$rgcconf\" && sed -i 's,\"auth_password\">.*<,\"auth_password\">YOUR_AUTH_PASSWORD<,g' \"$rgcconf\" && chmod 660 \"$rgcconf\" && puser2=$(ls -la /data/data/de.grennith.rgc.remotegpscontroller/|head -n2|tail -n1|awk '{print $3}') && chown \"$puser2\":\"$puser2\" \"$rgcconf\" && reboot"
+    }
+  ]
+}
