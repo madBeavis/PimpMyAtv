@@ -49,7 +49,7 @@ data_test['message'] = body
 
 # send to pokealarm
 response = requests.post(url=pa_url, data=json.dumps(data_test), headers={"Content-Type": "application/json"}, timeout=5)
-print ('pokelarm response =',response)
+print ("pokelarm response = ",response)
 
 # send to db
 mydb = mysql.connector.connect(host="ip", user="username", password="password", database="db_name")
