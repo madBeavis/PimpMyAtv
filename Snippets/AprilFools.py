@@ -5,6 +5,7 @@
 # adjust values that you see fit, if you have to ask you shouldn't bother
 #
 # tested only on pokealarm
+# verified working on March 30, 2021
 
 import json
 import requests
