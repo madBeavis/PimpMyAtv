@@ -3,6 +3,8 @@
 #
 # remember i hate python, so this is very hacky
 # adjust values that you see fit, if you have to ask you shouldn't bother
+#
+# tested only on pokealarm
 
 import json
 import requests
@@ -16,8 +18,8 @@ pa_url = 'http://pa_ip:port'
 
 body = {}
 body['gender'] = 1
-body['encounter_id'] = 1844671102692952711678
-body['spawnpoint_id'] = 'some_id'
+body['encounter_id'] = 123456
+body['spawnpoint_id'] = some_id
 body['cp'] = 281
 body['cp_multiplier'] = 0.69
 body['pokemon_id'] = 637
@@ -31,9 +33,9 @@ body['weight'] = 46
 body["disappear_time_verified"] = 'true'
 body['form'] = 0
 body['last_modified_time'] = datetime.now().timestamp()
-body["individual_defense"] = 14
-body["individual_attack"] = 14
-body["individual_stamina"] = 14
+body["individual_defense"] = 15
+body["individual_attack"] = 15
+body["individual_stamina"] = 15
 body["disappear_time"] = datetime.now().timestamp() + timedelta(minutes=28, seconds=12).total_seconds()
 body["disappear_time_utc"] = datetime.utcnow().timestamp() + timedelta(minutes=28, seconds=12).total_seconds()
 body["pokemon_level"] = 15
