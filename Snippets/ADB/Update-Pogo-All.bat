@@ -1,5 +1,6 @@
 REM windows batch script to install pogo apks to multiple devices
 REM make a list of devices in excel or however you want
+REM stolen from gosh knows where and from gosh knows who, but credit to our intrepid unknown batch file artist
 
 adb disconnect
 timeout 10
