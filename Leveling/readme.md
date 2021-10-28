@@ -19,20 +19,3 @@ I had run up against the Google account registration limit, so in order to have 
 Level 30 accounts are created with MAD in what is called level mode.  This just goes around spinning stops.  You will need to spin just under 8000 stops to get an account to 30 (2 million xp) if you don't use lucky eggs.  Don't worry, set things up correctly and MAD will handle things for you.
 
 I can't see routefree leveling being faster than using actual routes, so I only use routes.  Staying focused on the densest areas and not back tracking is they key.  Make sure you have ortools installed to speed up route calcs.  Make sure to pop eggs as they come, using my NYC routes the densest are at the beginning, might as well get the most XP per egg.
-
-# Why can't I get 30 in one run
-
-You need to start using eggs as they come...
-
-There appears to be a stop spun limit per week of 7k.  As shown by the math provided by eevvee33 @ https://discordapp.com/channels/465247740553592832/465247740553592835/669635127156146178 breaks down why your worker will get stuck at about level 29.8 and hang.  Simply rest it for a few days and finish it off.  The math is shown as follows:
-
-* spin a new pokestop: 250xp
-* spin 10th new pokestop in a row: 500xp
-* daily spin streak (days 1-6): 500xp
-* daily spin streak (day 7): 2000xp
-* This explains why we hit level 29.8 after spinning 7000 stops:
-  * 6300 new stops (250xp)
-  * 700 new stops as 10th new stop in a row (500xp)
-  * 6 daily streaks (500xp)
-  * 1 7th day streak (2000xp)
-* 6300*250 + 700*500 + 6*500 + 2000 = 1930000 xp (level 29.8)
