@@ -10,7 +10,4 @@ adb connect 192.168.8.51:5555
 timeout 2
 
 rem running setup to monitor
-scrcpy -b2M -m512 --window-title atv01 --render-driver=opengl
-
-rem running setup for configuration
-rem scrcpy -b4M -m1024 --window-title atv01 --render-driver=opengl
+scrcpy -b8m -m1024 --window-title atv001 --render-driver=opengl --max-fps=30
