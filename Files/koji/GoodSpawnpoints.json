@@ -965,5 +965,6 @@
     "min_points": 1,
     "sort_by": "ClusterCount",
     "cluster_mode": "BruteForce",
-    "cluster_split_level": 1
+    "cluster_split_level": 1,
+	"fast": false
 }
