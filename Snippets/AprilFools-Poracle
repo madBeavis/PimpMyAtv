@@ -15,7 +15,7 @@ import random
 from time import time 
 
 #settings
-poracle_url = 'http://192.168.8.200:3030'
+poracle_url = 'http://ip:port'
 
 body = {}
 body['gender'] = 1
