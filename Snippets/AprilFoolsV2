@@ -1,0 +1,194 @@
+# fake monster creator for poracle that sends an alert to poracle
+#
+# this was designed for axew cd.  in order to differentiate real spawns from fake spawns
+# for this example, actual axew spawns will have a size of 5, so you should edit rdm to limit size of mons from 0-4 by clamping size in Pokemon.swift
+#
+# remember i hate python, so this is very hacky
+# adjust values that you see fit, if you have to ask you shouldn't bother
+#
+# tested only on poracle
+# verified working on June 4, 2023
+
+import requests
+from datetime import datetime
+from datetime import timedelta
+import random
+from time import time
+import json
+import numpy as np
+from shapely.geometry import Point, Polygon
+
+#
+#START EDITING GENERAL SETTINGS HERE TO CHANGE BEHAVIOUR
+#settings
+#
+
+#url for poracle
+pa_url = 'http://ip:port'
+
+#odd of producing a spawn, 0.25 for 1 in 4, 0.5 for 1 in 2, 0.75 for 3 in 4
+spawnChance = 0.25
+
+#pokemon_id
+pokemonID = 610
+
+#weather
+weatherForecast = 4
+
+#coordinate ranges, paste in array from koji for area with last coord removed
+spawnPolygon = Polygon([[lat1,lon1],[lat2,lon1],[lat3,long3],[lat4,lon4]])
+
+#levels for spawning
+minLevel = 1
+maxLevel = 30
+
+#time range for spawns
+minTime = 15
+maxTime = 28
+
+#base values for mon
+baseHeight = 0.6
+baseWeight = 18.0
+
+#set variance for height & weight
+varianceHeight = 0.3
+varianceWeight = 0.5
+
+#
+#STOP EDITING GENERAL SETTINGS
+#
+
+# utility functions
+def fillFastMoves():
+    moveData = {}
+
+    moveData[0] = 266 # iron tail
+    moveData[1] = 220 # scratch
+
+    return moveData
+
+
+def fillChargeMoves():
+    moveData = {}
+
+    moveData[0] = 58  # aqua tail
+    moveData[1] = 83  # dragon claw
+    moveData[2] = 253  # dragon tail
+
+    return moveData
+
+
+def fillMonsterData():
+    levelData = {}
+
+    levelData[1] = 19
+    levelData[2] = 60
+    levelData[3] = 102
+    levelData[4] = 143
+    levelData[5] = 184
+    levelData[6] = 225
+    levelData[7] = 267
+    levelData[8] = 308
+    levelData[9] = 349
+    levelData[10] = 391
+    levelData[11] = 430
+    levelData[12] = 469
+    levelData[13] = 508
+    levelData[14] = 547
+    levelData[15] = 586
+    levelData[16] = 625
+    levelData[17] = 664
+    levelData[18] = 704
+    levelData[19] = 743
+    levelData[20] = 782
+    levelData[21] = 821
+    levelData[22] = 860
+    levelData[23] = 899
+    levelData[24] = 938
+    levelData[25] = 977
+    levelData[26] = 1016
+    levelData[27] = 1056
+    levelData[28] = 1095
+    levelData[29] = 1134
+    levelData[30] = 1173
+    levelData[31] = 1193
+    levelData[32] = 1212
+    levelData[33] = 1232
+    levelData[34] = 1251
+    levelData[35] = 1271
+
+    return levelData
+
+def Random_Points_in_Polygon(polygon, number):
+    points = []
+    minx, miny, maxx, maxy = polygon.bounds
+    while len(points) < number:
+        pnt = Point(np.random.uniform(minx, maxx), np.random.uniform(miny, maxy))
+        if polygon.contains(pnt):
+            points.append(pnt)
+    return points
+
+
+#start main body of program that does stuff
+monsterData = {}
+
+#load mon level / cp / move data from function
+levelCpData = fillMonsterData()
+fastMoves = fillFastMoves()
+chargeMoves = fillChargeMoves()
+
+#figure out bounding box coords for scan area and get a coordinate from inside it
+spawnCoord = Random_Points_in_Polygon(spawnPolygon, 1)
+
+#determine if going to spawn or not
+if spawnChance < random.uniform(0.0, 1.0):
+    print("Spawnfaker exiting early due to failed spawn chance")
+    quit()
+
+spawnMinutes = random.randint(minTime, maxTime)
+spawnSeconds = random.randint(0,59)
+
+body = {}
+
+body["pokemon_level"] = random.randint(minLevel,maxLevel)
+body['cp'] = levelCpData[spawnLevel]
+body['pokemon_id'] = pokemonID
+
+body['gender'] = random.randint(1,2)
+body['size'] = 5
+body['encounter_id'] = "123456"
+body['spawnpoint_id'] = "1"
+body['cp_multiplier'] = 0.69
+
+body["display_pokemon_id"] = None
+body['latitude'] = spawnCoord[0].x
+body['longitude'] = spawnCoord[0].y
+body['pokestop_id'] = "None"
+body['move_1'] = fastMoves[random.randint(0, len(fastMoves) -1)]
+body['move_2'] = chargeMoves[random.randint(0, len(chargeMoves) -1)]
+body['height'] = baseHeight + random.uniform( -1.0 * varianceHeight, varianceHeight)
+body['weight'] = baseWeight + random.uniform( -1.0 * varianceWeight, varianceWeight)
+body["disappear_time_verified"] = 'true'
+body['form'] = 0
+body['last_modified_time'] = int(time())
+body["individual_defense"] = 15
+body["individual_attack"] = 15
+body["individual_stamina"] = 15
+body["disappear_time"] = int(time()) + int(timedelta(minutes=spawnMinutes, seconds=spawnSeconds).total_seconds())
+body["costume"] = 10
+body["weather"] = weatherForecast
+
+data_test = {}
+data_test['type'] = "pokemon"
+data_test['message'] = body
+
+data_message = []
+data_message.append(data_test)
+
+data_string=json.dumps(data_message)
+
+print(data_string)
+
+# send to pokealarm
+response = requests.post(url=pa_url, data=data_string, headers={"Content-Type": "application/json"}, timeout=5)
+print ("poracle response = ",response)
