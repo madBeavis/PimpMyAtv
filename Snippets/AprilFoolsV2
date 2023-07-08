@@ -62,7 +62,7 @@ def fillFastMoves():
     moveData = {}
 
     moveData[0] = 221 # tackle
-    moveData[1] = 237 # scratch
+    moveData[1] = 237 # bubble
 
     return moveData
 
