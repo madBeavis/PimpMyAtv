@@ -1,7 +1,8 @@
 # fake monster creator for poracle that sends an alert to poracle
 #
 # this was designed for axew cd.  in order to differentiate real spawns from fake spawns
-# for this example, actual axew spawns will have a size of 5, so you should edit rdm to limit size of mons from 0-4 by clamping size in Pokemon.swift
+# for this example, actual axew spawns will have a form of 0 and fakes will have a form of 1
+# since poracle won't let you specify such from discord, you will need to edit the record in the db and restart poracle
 #
 # remember i hate python, so this is very hacky
 # adjust values that you see fit, if you have to ask you shouldn't bother
@@ -10,33 +11,33 @@
 # verified working on June 4, 2023
 
 import requests
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, date, time, timedelta
 import random
-from time import time
+import time
 import json
 import numpy as np
 from shapely.geometry import Point, Polygon
 
-#
 #START EDITING GENERAL SETTINGS HERE TO CHANGE BEHAVIOUR
 #settings
-#
-
-#url for poracle
 pa_url = 'http://ip:port'
 
-#odd of producing a spawn, 0.25 for 1 in 4, 0.5 for 1 in 2, 0.75 for 3 in 4
-spawnChance = 0.25
+#odd of producing a spawn
+# 0.25 for 1 in 4, 0.5 for 1 in 2, 0.75 for 3 in 4
+spawnChance = 0.20
+
+#enable pausing of execution to appear more random and not spawn on top of minute
+workDelay = 1
+workDelayMaxPause = 30
 
 #pokemon_id
-pokemonID = 610
+pokemonID = 7
 
 #weather
-weatherForecast = 4
+weatherForecast = 3
 
 #coordinate ranges, paste in array from koji for area with last coord removed
-spawnPolygon = Polygon([[lat1,lon1],[lat2,lon1],[lat3,long3],[lat4,lon4]])
+spawnPolygon = Polygon([[lat1,lon1],[lat2,lon1],[lat3,lon3],[lat4,lon4],[lat1,lon1]])
 
 #levels for spawning
 minLevel = 1
@@ -54,16 +55,14 @@ baseWeight = 18.0
 varianceHeight = 0.3
 varianceWeight = 0.5
 
-#
 #STOP EDITING GENERAL SETTINGS
-#
 
-# utility functions
+# utility functions below
 def fillFastMoves():
     moveData = {}
 
-    moveData[0] = 266 # iron tail
-    moveData[1] = 220 # scratch
+    moveData[0] = 221 # tackle
+    moveData[1] = 237 # scratch
 
     return moveData
 
@@ -71,9 +70,9 @@ def fillFastMoves():
 def fillChargeMoves():
     moveData = {}
 
-    moveData[0] = 58  # aqua tail
-    moveData[1] = 83  # dragon claw
-    moveData[2] = 253  # dragon tail
+    moveData[0] = 57  # aqua jet
+    moveData[1] = 58  # aqua tail
+    moveData[2] = 105  # water pulse
 
     return moveData
 
@@ -81,41 +80,41 @@ def fillChargeMoves():
 def fillMonsterData():
     levelData = {}
 
-    levelData[1] = 19
-    levelData[2] = 60
-    levelData[3] = 102
-    levelData[4] = 143
-    levelData[5] = 184
-    levelData[6] = 225
-    levelData[7] = 267
-    levelData[8] = 308
-    levelData[9] = 349
-    levelData[10] = 391
-    levelData[11] = 430
-    levelData[12] = 469
-    levelData[13] = 508
-    levelData[14] = 547
-    levelData[15] = 586
-    levelData[16] = 625
-    levelData[17] = 664
-    levelData[18] = 704
-    levelData[19] = 743
-    levelData[20] = 782
-    levelData[21] = 821
-    levelData[22] = 860
-    levelData[23] = 899
-    levelData[24] = 938
-    levelData[25] = 977
-    levelData[26] = 1016
-    levelData[27] = 1056
-    levelData[28] = 1095
-    levelData[29] = 1134
-    levelData[30] = 1173
-    levelData[31] = 1193
-    levelData[32] = 1212
-    levelData[33] = 1232
-    levelData[34] = 1251
-    levelData[35] = 1271
+    levelData[1] = 11
+    levelData[2] = 35
+    levelData[3] = 60
+    levelData[4] = 84
+    levelData[5] = 109
+    levelData[6] = 133
+    levelData[7] = 157
+    levelData[8] = 182
+    levelData[9] = 206
+    levelData[10] = 231
+    levelData[11] = 254
+    levelData[12] = 277
+    levelData[13] = 300
+    levelData[14] = 323
+    levelData[15] = 346
+    levelData[16] = 369
+    levelData[17] = 392
+    levelData[18] = 415
+    levelData[19] = 439
+    levelData[20] = 462
+    levelData[21] = 485
+    levelData[22] = 508
+    levelData[23] = 531
+    levelData[24] = 554
+    levelData[25] = 577
+    levelData[26] = 600
+    levelData[27] = 623
+    levelData[28] = 646
+    levelData[29] = 670
+    levelData[30] = 693
+    levelData[31] = 704
+    levelData[32] = 716
+    levelData[33] = 727
+    levelData[34] = 739
+    levelData[35] = 750
 
     return levelData
 
@@ -128,8 +127,12 @@ def Random_Points_in_Polygon(polygon, number):
             points.append(pnt)
     return points
 
-
 #start main body of program that does stuff
+if workDelay:
+    pauseTIme = random.randint(0,workDelayMaxPause)
+    print("Pausing " + str(pauseTIme) + "second(s)")
+    time.sleep(pauseTIme)
+
 monsterData = {}
 
 #load mon level / cp / move data from function
@@ -137,21 +140,28 @@ levelCpData = fillMonsterData()
 fastMoves = fillFastMoves()
 chargeMoves = fillChargeMoves()
 
-#figure out bounding box coords for scan area and get a coordinate from inside it
+#figure out bounding box coords for scan area
 spawnCoord = Random_Points_in_Polygon(spawnPolygon, 1)
 
-#determine if going to spawn or not
+#let's do the shit
 if spawnChance < random.uniform(0.0, 1.0):
     print("Spawnfaker exiting early due to failed spawn chance")
     quit()
 
+spawnLevel = random.randint(minLevel,maxLevel)
 spawnMinutes = random.randint(minTime, maxTime)
 spawnSeconds = random.randint(0,59)
+move1 = fastMoves[random.randint(0, len(fastMoves) -1)]
+move2 = chargeMoves[random.randint(0, len(chargeMoves) -1)]
 
 body = {}
 
-body["pokemon_level"] = random.randint(minLevel,maxLevel)
+print(levelCpData)
+
+body["pokemon_level"] = spawnLevel
 body['cp'] = levelCpData[spawnLevel]
+
+#unown
 body['pokemon_id'] = pokemonID
 
 body['gender'] = random.randint(1,2)
@@ -164,17 +174,17 @@ body["display_pokemon_id"] = None
 body['latitude'] = spawnCoord[0].x
 body['longitude'] = spawnCoord[0].y
 body['pokestop_id'] = "None"
-body['move_1'] = fastMoves[random.randint(0, len(fastMoves) -1)]
-body['move_2'] = chargeMoves[random.randint(0, len(chargeMoves) -1)]
+body['move_1'] = move1
+body['move_2'] = move2
 body['height'] = baseHeight + random.uniform( -1.0 * varianceHeight, varianceHeight)
 body['weight'] = baseWeight + random.uniform( -1.0 * varianceWeight, varianceWeight)
 body["disappear_time_verified"] = 'true'
 body['form'] = 0
-body['last_modified_time'] = int(time())
+body['last_modified_time'] = int(time.time())
 body["individual_defense"] = 15
 body["individual_attack"] = 15
 body["individual_stamina"] = 15
-body["disappear_time"] = int(time()) + int(timedelta(minutes=spawnMinutes, seconds=spawnSeconds).total_seconds())
+body["disappear_time"] = int(time.time()) + int(timedelta(minutes=spawnMinutes, seconds=spawnSeconds).total_seconds())
 body["costume"] = 10
 body["weather"] = weatherForecast
 
