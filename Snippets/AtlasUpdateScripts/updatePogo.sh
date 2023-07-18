@@ -14,3 +14,5 @@ for device in "${devices[@]}"; do
 	echo "updating pogo on "$device;	
 	adb -s $device install -r "pogo.apk";
 done
+
+adb disconnect
