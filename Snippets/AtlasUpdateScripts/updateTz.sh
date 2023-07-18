@@ -16,3 +16,5 @@ for device in "${devices[@]}"; do
 	
 	#adb -s $device install -r "pogo.apk" 
 done
+
+adb disconnect
