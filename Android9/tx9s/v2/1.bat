@@ -23,4 +23,4 @@ adb shell am start com.topjohnwu.magisk/.ui.MainActivity
 adb shell sleep 15
 adb shell input tap 1850 540
 adb shell sleep 15
-adb reboot
+rem adb reboot # will be handled by magisk after "ok" pressed
